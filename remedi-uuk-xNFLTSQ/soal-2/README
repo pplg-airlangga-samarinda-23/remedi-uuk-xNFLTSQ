@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Soal No. 2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h3>Rata-rata Tinggi Badan</h3>
+            <div>
+                <label for="siswa1">Siswa 1</label>
+                <input type="text" id="siswa1">
+            </div>
+            <div>
+                <label for="siswa2">Siswa 2</label>
+                <input type="text" id="siswa2">
+            </div>
+            <div>
+                <label for="siswa3">Siswa 3</label>
+                <input type="text" id="siswa3">
+            </div>
+            <div>
+                <label for="siswa4">Siswa 4</label>
+                <input type="text" id="siswa4">
+            </div>
+            <div>
+                <label for="siswa5">Siswa 5</label>
+                <input type="text" id="siswa5">
+            </div>
+            <div>
+                <input type="button" value="Hitung" onclick="hitungRataRata()">
+            </div>
+            <div>
+                <label for="hasil">Hasil</label>
+                <input type="text" id="hasil" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hitungRataRata() {
+            var siswa1 = parseFloat(document.getElementById('siswa1').value) || 0;
+            var siswa2 = parseFloat(document.getElementById('siswa2').value) || 0;
+            var siswa3 = parseFloat(document.getElementById('siswa3').value) || 0;
+            var siswa4 = parseFloat(document.getElementById('siswa4').value) || 0;
+            var siswa5 = parseFloat(document.getElementById('siswa5').value) || 0;
+
+            var hasil = (siswa1 + siswa2 + siswa3 + siswa4 + siswa5) / 5;
+
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+</body>
+</html>
